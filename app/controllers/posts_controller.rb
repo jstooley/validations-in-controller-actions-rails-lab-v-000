@@ -9,8 +9,8 @@ class PostsController < ApplicationController
 
   def update
     binding.pry
-    @post.title = (post_params[:title])
-    @post.content = (post_params[:content])
+    @post.title = post_params[:title]
+    @post.content = post_params[:content]
     @post.category = post_params[:category]
     @post.update(post_params)
 
