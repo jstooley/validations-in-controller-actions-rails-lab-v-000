@@ -8,7 +8,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    binding.pry
     @post.title = post_params[:title]
     @post.content = post_params[:content]
     @post.category = post_params[:category]
@@ -19,6 +18,7 @@ class PostsController < ApplicationController
   else
     render :edit
   end
+
   end
 
   private
