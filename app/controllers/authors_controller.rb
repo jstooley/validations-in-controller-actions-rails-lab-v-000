@@ -11,6 +11,7 @@ class AuthorsController < ApplicationController
     if @authur.valid?
       @author.save
       redirect_to author_path(@author)
+    else
     end
   end
 
