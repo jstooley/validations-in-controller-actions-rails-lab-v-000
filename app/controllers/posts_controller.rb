@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @post.category = post_params[:category]
 
   if @post.valid?
-
+    @post.save
     redirect_to post_path(@post)
   end
   end
