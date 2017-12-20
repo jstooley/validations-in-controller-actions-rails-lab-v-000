@@ -12,9 +12,11 @@ class PostsController < ApplicationController
     @post.title = post_params[:title]
     @post.content = post_params[:content]
     @post.category = post_params[:category]
-    @post.update(post_params)
+
+  if @post.valid?
 
     redirect_to post_path(@post)
+  end
   end
 
   private
