@@ -9,7 +9,8 @@ class PostsController < ApplicationController
 
   def update
     binding.pry
-    @post.title = (post_params)
+    @post.title = (post_params[:title])
+    @post.content = (post_params[:content])
     @post.update(post_params)
 
     redirect_to post_path(@post)
